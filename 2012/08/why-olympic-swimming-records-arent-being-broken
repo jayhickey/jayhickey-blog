@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>Why Olympic Swimming Records Aren't Being Broken</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+            <article class="link">
+    
+                <header>
+                    <h2>
+                                                    <a href="http://www.wired.com/playbook/2012/07/olympic-swim-meet-slowed-by-textile-suits/"
+                            rel="bookmark">Why Olympic Swimming Records Aren't Being Broken</a>
+                            <span class="linkarrow">&rarr;</span>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">August 01, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to Why Olympic Swimming Records Aren't Being Broken" href="why-olympic-swimming-records-arent-being-broken">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>I remember the commotion around ultra efficient <a href="http://en.wikipedia.org/wiki/LZR_Racer">Speedo LZR Racer</a> during the Beijing Olympics, but I didn't realize they were banned in '09:</p>
+<blockquote>
+<p>At the 2009 World Championships in Rome, swimmers set 43 world records in the last major meet for the super suits, which were banned at the end of that year. Since then, only five swimming world records have been broken — the three thus far in London and two at the 2011 World Championships in Shanghai.</p>
+</blockquote>
+<h2>How they work</h2>
+<p>The suits are a mix of woven elastane-nylon and polyurethane panels that were wind tunnel tested by NASA—making it smoother than shaven skin. And instead of sewed together, the the seams are ultrasonically welded (yes, using <em>sound</em>).</p>
+<p>These factors contribute to the hydrodynamics by reducing drag, and the LZR Racer then compresses the body and traps air for added buoyancy. On the downside, they can only be worn once or twice. Because of the thinness of the materials, a rip can happen at any moment. But when you have <a href="http://www.london2012.com/news/articles/review-phelps-books-his-place-history.html">19 Olympic Medals</a><sup id="fnref:outdated"><a class="footnote-ref" href="#fn:outdated" rel="footnote">1</a></sup>, that's just a business expense.</p>
+<p>A small tidbit for you fashionistas—the cosmetics of the LZR were designed by Comme De Garçons.</p>
+<h2>Banning</h2>
+<p>Swimmers started to wear multiple LZR's overtop one another for an added buoyancy effect. <a href="http://en.wikipedia.org/wiki/Therese_Alshammar">Therese Alshammar</a> of Sweden had her world record in the 50m butterfly taken from her because she used two suits, claiming the second was backup for a possible "wardrobe malfunction" if the top suit tore.</p>
+<p>But <a href="http://en.wikipedia.org/wiki/FINA">FINA</a> stepped in, and started limiting the suits' buoyancy and thickness. Buoyancy must now be below 0.5 Newton and have a thickness no greater than 0.8mm. Also no more than 50% of the suit can be covered in non-permeable materials (such as the NASA polyurethane panels).</p>
+<p>I understand the reasoning for the ban, but it's a shame that such a fascinating use of technology will be stunted by Olympic rules. </p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:outdated">
+<p>This will probably be outdated in the next 24-48 hours.&#160;<a class="footnote-backref" href="#fnref:outdated" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>

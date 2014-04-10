@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>Incredible Tie in the Olympic Trials</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+            <article class="link">
+    
+                <header>
+                    <h2>
+                                                    <a href="http://www.theatlanticwire.com/national/2012/06/how-do-you-settle-tie-track-meet/53873/"
+                            rel="bookmark">Incredible Tie in the Olympic Trials</a>
+                            <span class="linkarrow">&rarr;</span>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">June 27, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to Incredible Tie in the Olympic Trials" href="olympic-trials-tie">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>An unprecedented tie:</p>
+<blockquote>
+<p>Sprinters Jeneba Tarmoh and Allyson Felix appeared to finish third and fourth in the final of the women's 100-meter dash, but the state of the art cameras — that shoot at 3,000 frames per <em>second</em> — showed that they actually crossed the finish line at the exact same time. Normally, that wouldn't be such a big deal except that the race was also being used to determine the runners who will represent the U.S. at the London Olympics next month. The U.S. is only allowed to send three runners and number four will watch from home.</p>
+</blockquote>
+<p>This is nuts! Tarmoh and Felix ran a time of 11.07 seconds. Taking it an extra decimal place, they were still tied at 11.068. It's coming down to either a run-off or a coin toss. Both women have the same coach, and are competing in the 200m dash as well (finals are this Friday at 9:50 PM EST). So if at least one of them qualifies in the 200, hopefully they'll let the other go in the 100. Having all your hopes and dreams of the Olympics come down to a <em>coin toss?</em>  I couldn't even imagine.</p>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>

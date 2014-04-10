@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>Markdownify Instagram</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+            <article>
+    
+                <header>
+                    <h2>
+                                                    <a href="markdownify-instagram"
+                            rel="bookmark">Markdownify Instagram</a>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">August 12, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to Markdownify Instagram" href="markdownify-instagram">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>I've been thinking for a while now about how nice it would be to automatically create a Markdown post of the Instagram photos I take. I looked around at Instagram's API's and, while I could probably set up a way to pull directly from the API, I wanted to throw something together quickly. I'm on my way to <a href="http://en.wikipedia.org/wiki/Maui">Maui</a> for vacation, so I spent an evening making this handy little Python script that'll enable me to easily post my Instagram photos to jayhickey.com.</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">re</span> 
+<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">localtime</span><span class="p">,</span> <span class="n">strftime</span>
+
+<span class="k">def</span> <span class="nf">read_file</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
+    <span class="c"># Check for filename for Instagram file from IFTTT</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">files</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s">&quot;r&quot;</span><span class="p">)</span>
+    <span class="n">fileLines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">fileDict</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c"># Create a dictionary with the Instagram info</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fileLines</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">r&#39;([\w\@\.]+)\s*:\s*(.*)&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">fileDict</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">fileDict</span>
+
+<span class="k">def</span> <span class="nf">create_draft</span><span class="p">(</span><span class="n">fileDict</span><span class="p">,</span> <span class="n">draftLoc</span><span class="p">,</span> <span class="n">imgLink</span><span class="p">):</span>
+    <span class="c"># Replace non alphanumerics with dashes for filename</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s">r'[\t !"#$:;%&\'()*\-/<=>?@\[\\\]^_`{|},.]+'</span><span class="p">,</span><span class="s">&quot;-&quot;</span><span class="p">,</span><span class="n">fileDict</span><span class="p">[</span><span class="s">&#39;Caption&#39;</span><span class="p">])</span>
+    <span class="k">while</span> <span class="n">c</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">&#39;-&#39;</span><span class="p">):</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="c"># Embed the photo with Markdown</span>
+    <span class="n">draft</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">draftLoc</span> <span class="o">+</span> <span class="s">&quot;/</span><span class="si">%s</span><span class="s">.md&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">c</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s">&quot;w&quot;</span><span class="p">)</span>
+    <span class="n">draft</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">fileDict</span><span class="p">[</span><span class="s">&#39;Caption&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+    <span class="n">draft</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;=====================</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="n">draft</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;Link: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fileDict</span><span class="p">[</span><span class="s">&#39;URL&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="n">draft</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;publish-not-yet</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">imgLink</span>
+    <span class="n">draft</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;![</span><span class="si">%(1)s</span><span class="s">](</span><span class="si">%(2)s</span><span class="s">)</span><span class="se">\n\n</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">{</span><span class="s">&quot;1&quot;</span> <span class="p">:</span> <span class="n">fileDict</span><span class="p">[</span><span class="s">&#39;Caption&#39;</span><span class="p">],</span> <span class="s">&quot;2&quot;</span> <span class="p">:</span> <span class="n">imgLink</span><span class="p">})</span>
+    <span class="n">draft</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;(Via [Instagram](http://instagram.com))&quot;</span><span class="p">)</span>
+    <span class="n">draft</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="c"># These might not be used, so make them empty</span>
+    <span class="n">Local_Image_URL_Path</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+    <span class="n">Website</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+
+    <span class="c"># Read input arguments</span>
+    <span class="n">IFTTT_Read_Path</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">Draft_Write_Path</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="c"># These parameters are optional</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">Local_Image_URL_Path</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">Website</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+
+    <span class="c"># Make sure the file is a text file from Instagram</span>
+    <span class="n">fileList</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="n">IFTTT_Read_Path</span> <span class="o">+</span> <span class="s">&#39;*instagr.am*.txt&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">fileList</span><span class="p">:</span>
+
+        <span class="c"># Read the Instagram data</span>
+        <span class="n">fileDict</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">Local_Image_URL_Path</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span> <span class="ow">or</span> <span class="n">Website</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+            <span class="c"># Make a local copy of the image and date it</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">URLopener</span><span class="p">()</span>
+            <span class="n">eventTime</span> <span class="o">=</span> <span class="n">strftime</span><span class="p">(</span><span class="s">&quot;%Y-%m-</span><span class="si">%d</span><span class="s">_%H%M%S&quot;</span><span class="p">,</span> <span class="n">localtime</span><span class="p">())</span>
+            <span class="n">fileName</span><span class="p">,</span> <span class="n">fileExtension</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">fileDict</span><span class="p">[</span><span class="s">&#39;Source&#39;</span><span class="p">])</span>
+            <span class="n">imgLinkPath</span> <span class="o">=</span> <span class="n">IFTTT_Read_Path</span> <span class="o">+</span> <span class="n">eventTime</span> <span class="o">+</span> <span class="n">fileExtension</span>
+            <span class="n">image</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">fileDict</span><span class="p">[</span><span class="s">&#39;Source&#39;</span><span class="p">],</span> <span class="n">imgLinkPath</span><span class="p">)</span>
+            <span class="n">imgURL</span> <span class="o">=</span> <span class="n">Website</span> <span class="o">+</span> <span class="n">Local_Image_URL_Path</span> <span class="o">+</span> <span class="n">eventTime</span> <span class="o">+</span> <span class="n">fileExtension</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c"># Use the image hosted by Instagram</span>
+            <span class="n">imgURL</span> <span class="o">=</span> <span class="n">fileDict</span><span class="p">[</span><span class="s">&#39;Source&#39;</span><span class="p">]</span>
+
+        <span class="c"># Create a Markdown draft</span>
+        <span class="n">create_draft</span><span class="p">(</span><span class="n">fileDict</span><span class="p">,</span> <span class="n">Draft_Write_Path</span><span class="p">,</span> <span class="n">imgURL</span><span class="p">)</span>
+
+        <span class="c"># Delete the Instagram text file from IFTTT</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+</pre></div>
+
+<h2>Installation</h2>
+<p>Here's the input to run it (the last two parameters are optional):</p>
+<div class="codehilite"><pre><span class="n">python</span> <span class="n">MarkdownifyInstagram</span><span class="p">.</span><span class="n">py</span> <span class="p">{{</span><span class="n">IFTTT_Read_Path</span><span class="p">}},</span> <span class="p">{{</span><span class="n">Draft_Write_Path</span><span class="p">}},</span> <span class="p">{{</span><span class="n">Local_Image_URL_Path</span><span class="p">}},</span> <span class="p">{{</span><span class="n">Website</span><span class="p">}}</span>
+</pre></div>
+
+
+<p>Example:</p>
+<div class="codehilite"><pre>python MarkdownifyInstagram.py /home/blog/secondcrack/www/media/instagram/ /home/blog/Dropbox/Blog/drafts/ /media/instagram/ http://jayhickey.com
+</pre></div>
+
+
+<p>The downside to using IFTTT, according to their hilariously titled <a href="http://ifttt.com/wtf">/wtf page</a>, is that it only polls for new data every 15 minutes. So this won't happen instantly.<sup id="fnref:imp"><a class="footnote-ref" href="#fn:imp" rel="footnote">2</a></sup></p>
+<p><a href="https://github.com/jayhickey/MarkdownifyInstagram">GitHub</a> is where you can find all the instructions for setting up the IFTTT recipe, running Markdownify Instagram, and even how to use a shell script and <code>iNotify</code> to automate the process. I won't go into any of that here. However, I do think it's interesting to dive a little deeper and see how the script works.</p>
+<h2>Implementation</h2>
+<p>Here's a look at a few of the design decisions I made while writing Markdownify Instagram.</p>
+<h3>Reading the text file from IFTTT</h3>
+<p>When triggered, the <a href="http://ifttt.com/recipes/49883">IFTTT recipe</a> will create a plain text file with a name like <code>http-instagr.ampoefb-ihvv0.txt</code> and these contents:</p>
+<div class="codehilite"><pre>URL: http://instagram.com/p/JF1n/
+Source: http://distillery.s3.amazonaws.com/media/2010/11/03/217c074328864f76b5d730837403f371_7.jpg
+Caption: Deadly.
+</pre></div>
+
+
+<p>Python's built in <a href="http://docs.python.org/library/glob.html">glob module</a> is first used to create a list of all the Instagram text files in your <code>{{IFTTT_Read_Path}}</code>:</p>
+<div class="codehilite"><pre><span class="n">fileList</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">IFTTT_Read_Path</span> <span class="o">+</span> <span class="s">&#39;*instagr.am*.txt&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>The <code>*</code> will match zero or more characters, so a file that starts with anything, contains <code>instagr.am</code>, ends with <code>.txt</code>, and has anything in between will be appended to <code>fileList</code>. This is the first time I've actually used the glob module. Although less powerful than regular expressions, it's perfect for finding specific files in directories.</p>
+<h3>Creating a dictionary from the data</h3>
+<p>After getting a list of files, <code>read_file</code> uses <code>readlines()</code> to split the text into individual lines. The regex pattern <code>r'([\w\@\.]+)\s*:\s*(.*)'</code>  creates <code>matchobject</code>'s out of those lines, then lastly the dictionary <code>fileDict</code> is created from the matches:</p>
+<div class="codehilite"><pre><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fileLines</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">r&#39;([\w\@\.]+)\s*:\s*(.*)&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">fileDict</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Regex is hard to look at, but it's not too bad once you grasp the syntax. Google's <a href="http://code.google.com/edu/languages/google-python-class/regular-expressions.html">regular expressions tutorial</a> is a good place to start, and you can learn a whole lot more just by searching the web. Each set of parenthesis corresponds to a group match that will be stored in an additional element of <code>x</code>. Because there are two sets of parenthesis, <code>x</code> will have a group size of 3. <code>x.group(0)</code> will contain all of <code>line</code>, <code>x.group(1)</code> will contain the text before the : (the first set of parenthesis in the regex), and x.group(2) will have everything after (the second set). Like this:</p>
+<ul>
+<li><code>x.group(0) = 'URL: http://instagram.com/p/JF1n/'</code></li>
+<li><code>x.group(1) = 'URL'</code></li>
+<li><code>x.group(2) = 'http://instagram.com/p/JF1n/'</code></li>
+</ul>
+<p>After the <code>for</code> loop completes, fileDict will look something like this</p>
+<div class="codehilite"><pre><span class="n">fileDict</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;URL&#39;</span><span class="p">:</span><span class="s">&#39;http://instagram.com/p/JF1n/&#39;</span><span class="p">,</span> <span class="s">&#39;Source&#39;</span><span class="p">:</span><span class="s">&#39;http://distillery.s3.amazonaws.com/media/2010/11/03/217c074328864f76b5d730837403f371_7.jpg&#39;</span><span class="p">,</span> <span class="s">&#39;Caption&#39;</span><span class="p">:</span><span class="s">&#39;Deadly.&#39;</span><span class="p">}</span>
+</pre></div>
+
+
+<p>So printing the URL is as simple as typing <code>print fileDict['URL']</code>. </p>
+<!-- Mention Local hosting instead of Amazon S3 -->
+
+<h3>Saving the local image file</h3>
+<p>If the last two parameters are entered, your photo will be saved locally—so you aren't relying on Instagram's S3 hosting. If Facebook ever decides to shut down Instagram, you won't have a broken embedded image. To accomplish this, I used the Python <code>urllib</code> module to save an image from a URL by setting <code>image = urllib.URLopener()</code>, then</p>
+<div class="codehilite"><pre><span class="n">image</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">fileDict</span><span class="p">[</span><span class="s">&#39;Source&#39;</span><span class="p">],</span> <span class="n">imgLinkPath</span><span class="p">)</span>
+</pre></div>
+
+
+<p>where <code>fileDict['Source']</code> is the link to the Instagram image and <code>imgLinkPath</code> is where the image saved will be saved, e.g., <code>/home/blog/secondcrack/www/media/instagram/2012-11-30_062759.jpg</code></p>
+<p>The local image is named using <code>strftime("%Y-%m-%d_%H%M%S", localtime())</code>. This creates a string formatted something like <code>2012-11-30_062759</code>, where:</p>
+<ul>
+<li>%Y is the year with century as a decimal (use %y for without century, resulting in <code>12</code> instead of <code>2012</code>)</li>
+<li>%m is the month from <code>[01-12]</code></li>
+<li>%d is the day of the month from <code>[01-31]</code></li>
+<li>%H is the hour in 24-hour time (use <code>%I</code> for 12-hour time)</li>
+<li>%M is the minute from <code>[00-59]</code></li>
+<li>%S is the second from <code>[00-61]</code><sup id="fnref:time"><a class="footnote-ref" href="#fn:time" rel="footnote">1</a></sup></li>
+</ul>
+<p>You can see the see the other <code>strftime</code> directives <a href="http://docs.python.org/library/time.html#time.strftime">here</a></p>
+<p>I've been using this convention ever since Gabe over at MacDrifter <a href="http://www.macdrifter.com/2012/07/why-file-time-stamps-are-unreliable.html">recommended it</a>. It's very easy to both sort and quickly look at. I love it so much I even set this as a <a href="http://smilesoftware.com/TextExpander/">TextExpander</a> shortcut for naming files and photos on my Mac:</p>
+<p><img alt="Textexpander" src="http://jayhickey.com/media/2012/08/2012-08-10_031115.png" /></p>
+<h3>Creating the Markdown draft</h3>
+<p>The final function, <code>create_draft</code>, is pretty straightforward and will create a Markdown file that looks like this:</p>
+<div class="codehilite"><pre>Deadly.
+=====================
+type: Link
+publish-not-yet
+
+![Deadly.](http://jayhickey.com/media/instagram/2010-11-03_062759.jpeg)
+(Via [Instagram](http://instagram.com))
+</pre></div>
+
+
+<h2>Conclusion</h2>
+<p>Overall, I'm pretty happy with the way Markdownify Instagram turned out. It produces a nice, simple post that's easy to modify.<sup id="fnref:mod"><a class="footnote-ref" href="#fn:mod" rel="footnote">3</a></sup> There's also tons of possiblities for new features and expansions. I find it extremely useful, so get prepared for an influx of pictures posted here. Aloha!</p>
+<p><strong>Update:</strong> I've made a small addition to the script's <code>create_draft</code> function. Non-alphanumerics are now replaced with dashes in the filename. So any spaces or special characters will be turned into dashes for the .md slug. </p>
+<p>I used a little more regex magic to make the substitution. Here's what it looks like:</p>
+<div class="highlight"><pre> <span class="c"># Repace non-alphanumerics with dashes for filename</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s">r&#39;[\t !&quot;#$:;%&amp;</span><span class="se">\&#39;</span><span class="s">()*\-/&lt;=&gt;?@\[</span><span class="se">\\</span><span class="s">\]^_`{|},.]+&#39;</span><span class="p">,</span><span class="s">&quot;-&quot;</span><span class="p">,</span><span class="n">fileDict</span><span class="p">[</span><span class="s">&#39;Caption&#39;</span><span class="p">])</span>
+    <span class="k">while</span> <span class="n">c</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">&#39;-&#39;</span><span class="p">):</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+
+<p>Make sure to grab the latest commit off <a href="https://github.com/jayhickey/MarkdownifyInstagram">GitHub</a> so you have this feature.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:time">
+<p>Why <code>[00-61]</code> instead of <code>[00-59]</code>? To account for both leap seconds and the very rare double leap seconds, when they occur. &#160;<a class="footnote-backref" href="#fnref:time" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:imp">
+<p>Although it would be nice if it were instant, I don't think this is a very big deal.&#160;<a class="footnote-backref" href="#fnref:imp" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mod">
+<p>If you wanted, you could even tweak the <code>create_draft</code> function to include some additional html tags before and after the image for easy CSS tweaking. Make it look like a Polaroid or something.&#160;<a class="footnote-backref" href="#fnref:mod" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>

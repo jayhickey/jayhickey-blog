@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+	<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"/>
+	<link rel="shortcut icon" href="http://jayhickey.com/blog_logo.png"/>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+        <title>About</title>
+
+<!--
+	Jay Hickey	Typekit font code
+        <script type="text/javascript" src="http://use.typekit.com/kwf0rrq.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+-->
+    </head>
+
+    <body>
+
+<!--IE Garbage -->
+    <!--[if lte IE 8]>
+   <div id="ie-message">
+      I know this site looks like garbage. But it's because your browser is over 3 years old! Please upgrade to Safari, Chrome, Firefox, or IE 9+. I promise it will help.
+   </div>
+<![endif]-->
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                	<a href="/about">About</a>
+                	&nbsp;
+                	|
+                	&nbsp;
+                    <a href="/highlights"> Highlights</a>
+                	&nbsp;
+                    |
+                	&nbsp;
+                    <a href="http://twitter.com/jayhickey"> Twitter</a>
+
+                </nav>
+            </div>
+          <div id="container">
+
+                                                <article>
+                        <header>
+                            <h1>
+                                About
+                            </h1>
+                        </header>
+
+                        <p>Hi! I'm Jay Hickey, an electrical engineering student at the <a href="http://www.uc.edu/">University of Cincinnati</a>.</p>
+
+                        <p>I was born in New Mexico, but raised in Alaska and Ohio. I have worked cities such as New York City and Cincinnati&#8212;ameliorating everything 							from microcontrollers to cellular LTE networks. I'm always trying to visit somewhere new.</p>
+
+                        <p>This is where I write about things that interest me, such as technology, programming, design, music, movies, and running.</p>
+
+                        <p>My software tomfoolery can be found on <a href="http://github.com/jayhickey">Github</a>, and the blog posts I&#8217;ve made about them are <a href="/highlights#softwarecreations">here</a>.<p>
+
+                        <!-- <p><img class="leftb" src="http://jayhickey.com/media/profile.jpg" alt="Jay Hickey" title="Me." style="border-radius:10px" width="288" height="340"/></p> -->
+
+<h4>Contact</h4>
+
+<ul>
+<li><p><strong>Email: </strong>johnrhickey@gmail.com</p></li>
+<li><p><strong>Twitter: </strong> <a href="http://twitter.com/jayhickey/">@jayhickey</a></p></li>
+</ul>
+      </article>
+
+            <footer>
+                <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="http://jayhickey.com/rss.xml">RSS feed</a></p>
+
+            </footer>
+          </div>
+        </section>
+    </body>
+</html>

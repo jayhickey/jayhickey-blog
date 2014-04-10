@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>iPhone 5 Announced</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+            <article>
+    
+                <header>
+                    <h2>
+                                                    <a href="iphone-5-announced"
+                            rel="bookmark">iPhone 5 Announced</a>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">September 13, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to iPhone 5 Announced" href="iphone-5-announced">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>The <a href="http://www.apple.com/iphone/features/">iPhone 5</a> was announced yesterday, dressed up exactly <a href="http://jayhickey.com/2012/05/next-generation-iphone-parts-leaked">as expected</a>. Taller 4" screen, thinner, lighter, and contained in a unibody aluminum housing. It will be released next Friday, September 21st. I can't wait to get it.</p>
+<p>A lot of pundits are disappointed by the lack of surprise and new features, but I love the new phone. If nothing had been leaked early, I think everyone would be more excited. But with Apple's massive production needs, hardware leaks are inevitable. That's just the way it's going to be now. </p>
+<p>I think the only iPhone 5 hardware feature that wasn't leaked ahead of time was the weight<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>—it's 20% lighter than the iPhone 4S. Doesn't sound like much, but it's the first thing most bloggers who've held the device noticed. See what Joshua Topolsky over at <a href="http://www.theverge.com">The Verge</a> has to say in the first 30 seconds of this hands-on:</p>
+<iframe src="http://www.youtube.com/embed/p6UxS4CoZ_g?autohide=1&amp;fs=1&amp;autoplay=0&amp;iv_load_policy=3&amp;rel=0&amp;modestbranding=1&amp;showinfo=0&amp;hd=1" frameborder="0" allowfullscreen></iframe>
+
+<p>I can't wait to pre-order mine tomorrow and (hopefully) have it in my hands next Friday. Here's what I'm most excited about<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>:</p>
+<ul>
+<li>
+<p><strong>A6 Processor:</strong> This is the best improvement—my iPhone 4 is feeling slower every day. <a href="http://www.anandtech.com/show/6280/apple-iphone-5-announced">AnandTech</a> has confirmed the iPhone 5 is powered by two ARM Cortex A15 cores on Samsung's 32nm LP HK+MG process. This marks the first time Apple has beat Samsung and TI to bringing a new ARM processor to the market. So this thing is cutting edge, and <em>really</em> fast<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>.</p>
+</li>
+<li>
+<p><strong>Size:</strong> A larger screen but smaller overall volume and width is exactly what I want in the iPhone. I wish it didn't have to be any taller, but a third of an inch won't kill me. Keeping the same width is most important, because wide Android phones look just terrible in the front pockets of properly fitted, slim-cut jeans. And unless you have ogre fists, good luck typing one handed.</p>
+</li>
+<li>
+<p><strong>LTE:</strong> I couldn't decide whether or not to stay on AT&amp;T or jump back to my family's Sprint Plan<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup>. But now that AT&amp;T has promised <a href="http://www.bgr.com/2012/09/06/att-lte-expansion-40-markets/">LTE in Cincinnati</a> by the end of the year, I'll be sticking with them. Might regret it later, but Sprint is way too far behind on LTE coverage to even be considered.</p>
+</li>
+<li>
+<p><strong>Sapphire Crystal Lens Cover:</strong> Sapphire crystal is second in hardness only to diamond. I've gone through multiple iPhone 4 backings, and almost all of them had scratched lenses from me just setting the phone on a table. A case could solved the problem, but I hate cases. This new lens protection is going to make those 8-megapixel photos and giant panoramas look great every time.</p>
+</li>
+<li>
+<p><strong>EarPods:</strong> These earbuds were 3 years in the making, went trough 124 iterations, and tested on 600 people. Apple claims EarPods were designed to fit everyone's ears. And they stay in your ears, which can't be said about the previous white buds.</p>
+</li>
+</ul>
+<p><strong>Update:</strong> AnandTech has <a href="http://www.anandtech.com/show/6292/iphone-5-a6-not-a15-custom-core">retracted</a> their claim that the iPhone 5 is powered by an ARM Cortex A15. While the previous Apple A5 and A5X were based on the ARMv7 Cortex A9 (and the A4 on Cortex A8 before that), the iPhone 5 isn't based on a vanilla A9 or A15. It's an entirely custom Apple design, but is manufactured on a 32 nm fab and has Virtual Floating Point (VFP) 4, just like the A15. The VFPv4 unit's 32 registers will allow for much faster computations per core (the previous upgrade from VFPv2 to VFPv3 for the A9 doubled the performance of the FPU). So Judging from the <a href="http://www.youtube.com/watch?v=ynBpKpjq5Oo">AnandTech hands-on</a>, I still think this phone will be shockingly faster than even the 4S.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>And what the processor is based off of, but I'll get to that in a second.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>I'm only going to mention new features that were announced yesterday. None of the "known since WWDC in June" iOS 6 software stuff. I've been running the new iOS on my iPhone 4 for a while, so none of that is new to me. But I will say: Apple Maps is fast and looks nice, but terrible for finding points-of-interest. I'm pretty disappointed in Maps, to be honest. Everything else is great though.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Watch the rest of the hands-on video above to see just how fast it is.&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Hopping to Verizon would be even better, but since they switched to only Share Everything plans, an account with just one line is way too expensive.&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>

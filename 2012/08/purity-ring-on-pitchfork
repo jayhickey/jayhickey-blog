@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>Purity Ring on Pitchfork's "+1" Series</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+            <article class="link">
+    
+                <header>
+                    <h2>
+                                                    <a href="http://pitchfork.com/news/47508-watch-purity-ring-perform-fineshrine-in-the-round/"
+                            rel="bookmark">Purity Ring on Pitchfork's "+1" Series</a>
+                            <span class="linkarrow">&rarr;</span>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">August 21, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to Purity Ring on Pitchfork's "+1" Series" href="purity-ring-on-pitchfork">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>Pitchfork has put together a neat video showcasing Purity Ring's live show. It's amazing that such a young, up-and-coming band can have a high tech lighting rig these days. Obviously acts like <a href="http://www.youtube.com/watch?v=cwZAoHpRZFE#t=1h16m48">Radiohead</a> and <a href="http://www.youtube.com/watch?v=8wCgxkQj_Qo">Pretty Lights</a><sup id="fnref:bonnaroo"><a class="footnote-ref" href="#fn:bonnaroo" rel="footnote">3</a></sup> blow them out of the water visually, but they're also more established and successful. I've fast-forwarded<sup id="fnref:ios"><a class="footnote-ref" href="#fn:ios" rel="footnote">1</a></sup> the video below so you can see the setup in action. Cocoon shaped lights follow the lead singer around and respond in special ways to vocals and drums. Jump back about a minute to hear Purity Ring talk about how it works:</p>
+<iframe src="http://www.youtube.com/embed/y0d4KSnaez4?autohide=1&amp;fs=1&amp;autoplay=0&amp;iv_load_policy=3&amp;rel=0&amp;modestbranding=1&amp;showinfo=0&amp;hd=1#t=3m44" frameborder="0" allowfullscreen></iframe>
+
+<p>Now I'm really excited for their show in Cincinnati this Saturday. If you're going to be in town, <a href="http://www.ticketfly.com/purchase/event/125787?wrKey=9CC5F1864C942673A09EF939A64788BD">tickets are only $12</a>. Purity Ring's<sup id="fnref:name"><a class="footnote-ref" href="#fn:name" rel="footnote">2</a></sup> debut LP <em>Shrines</em> is fantastic, so even if you can't go, make sure to at least check the album out.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ios">
+<p>If you're on an iOS or other mobile device, you probably won't be jumped forward. But in case you're wondering, I set the video to start 3 minutes and 44 seconds in.&#160;<a class="footnote-backref" href="#fnref:ios" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:name">
+<p>Still having a tough time getting over how bad the name "Purity Ring" is. But in the end, it's the music that really matters I guess.&#160;<a class="footnote-backref" href="#fnref:name" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:bonnaroo">
+<p>I was at the Bonnaroo show where this video was made, and those were definitely the coolest lights I'd ever seen. I don't even really listen to Pretty Lights, but the live show is a must see. I promise you won't regret it.&#160;<a class="footnote-backref" href="#fnref:bonnaroo" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>

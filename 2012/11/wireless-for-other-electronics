@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>Wireless for "Other" Electronics</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+            <article class="link">
+    
+                <header>
+                    <h2>
+                                                    <a href="http://www.technologyreview.com/news/507321/cellular-data-network-for-inanimate-objects-goes-live-in-france/"
+                            rel="bookmark">Wireless for "Other" Electronics</a>
+                            <span class="linkarrow">&rarr;</span>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">November 14, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to Wireless for "Other" Electronics" href="wireless-for-other-electronics">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>Interesting post by Technology Review about French startup SigFox, and their new approach to creating a wireless network: </p>
+<blockquote>
+<p>SigFox is focused on connecting cheap sensors and “dumb” home appliances to the Internet. The goal is to make all kinds of appliances and infrastructure, from power grids to microwave ovens, smarter by letting them share data. The general concept, known as “the Internet of Things,” has been discussed in academic circles for years, but it has yet to come to life.</p>
+</blockquote>
+<p>This is, without a doubt, a service I see on the horizon. I wouldn't be surprised to see a similar infrastructure start up in the U.S. very soon. SigFox is already about to go live in France. With how dumb and greedy all of the cellular carriers are, it's very unlikely any of them will cost-effectively fill the (on the rise) wireless appliance market. Plus SigFox' solution is cheaper, provides much lower energy consumption, and operates over a much longer range:</p>
+<blockquote>
+<p>A conventional cellular connection consumes 5,000 microwatts, but a two-way SigFox connection uses just 100. The company also says it is close to rolling out a network to the whole of France—an area larger than California—using just 1,000 antennas. Deployments are beginning in other European countries, and discussions are under way with U.S.-based cellular carriers about teaming up to roll out its technology stateside, says Nicholls. “SigFox can cover the entire U.S. territory with around 10,000 gateways, whereas a traditional cellular network operator needs at least several hundred thousand,” he says. This should make deployment significantly faster, and cheaper.</p>
+</blockquote>
+<p>The cost is further reduced thanks to their use of license-free frequency spectrum. SigFox thinks it should be possible to charge a fee of around $1 a year per device<sup id="fnref:dollar"><a class="footnote-ref" href="#fn:dollar" rel="footnote">1</a></sup>. The downside, of course, is the extremely low bandwidth of 100 bits/s. But for most devices, that doesn't matter. SigFox mentions potential applications ranging from Internet-connected bathroom scales to electrical smart grids and parking lot monitoring. I'm very excited for the potential of this.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:dollar">
+<p>Yes. <em>One dollar.</em>&#160;<a class="footnote-backref" href="#fnref:dollar" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>

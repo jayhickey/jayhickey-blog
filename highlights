@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+	<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"/>
+	<link rel="shortcut icon" href="http://jayhickey.com/blog_logo.png"/>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+        <title>Highlights</title>
+
+<!--
+		Typekit font code
+        <script type="text/javascript" src="http://use.typekit.com/kwf0rrq.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+-->
+    </head>
+
+    <body>
+
+<!--IE Garbage -->
+    <!--[if lte IE 8]>
+   <div id="ie-message">
+      I know this site looks like garbage. But it's because your browser is over 3 years old! Please upgrade to Safari, Chrome, Firefox, or IE 9+. I promise it will help.
+   </div>
+<![endif]-->
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                	<a href="/about">About</a>
+                	&nbsp;
+                	|
+                	&nbsp;
+                    <a href="/highlights"> Highlights</a>
+                	&nbsp;
+                    |
+                	&nbsp;
+                    <a href="http://twitter.com/jayhickey"> Twitter</a>
+
+                </nav>
+            </div>
+          <div id="container">
+
+                                                <article>
+                        <header>
+                            <h1>
+                                Highlights
+                            </h1>
+                        </header>
+
+<p>Here are some of my favorite posts so far. There isn&#8217;t much yet, but it should give you an idea of what this blog is about.</p>
+
+<br>
+
+<h4 id="softwarecreations">Software Creations</h4>
+
+
+<ul>
+<li><p><a href="http://jayhickey.com/2012/10/bringing-dark-sky-to-the-mac-with-pysky">Bringing Dark Sky to the Mac with PySky</a></p></li>
+<li><p><a href="http://jayhickey.com/2012/08/markdownify-instagram">Markdownify Instagram</a></p></li>
+<li><p><a href="http://jayhickey.com/2012/06/second-crack-bookmarklet-for-videos">Second Crack Bookmarklet For Embedding Videos</a></p></li>
+</ul>
+
+<br>
+
+<h4 id="technology">Technology</h4>
+
+<ul>
+<li><p><a href="http://jayhickey.com/2012/09/iphone-5">iPhone 5: the Little Things</a></p></li>
+</ul>
+
+<ul>
+<li><p><a href="http://jayhickey.com/2012/09/the-missing-iphone-keyboard">The Missing iPhone Keyboard</a></p></li>
+</ul>
+
+<ul>
+<li><p><a href="http://jayhickey.com/2012/07/using-magnetic-fields-to-improve-location">Using Magnetic Fields to Improve Smartphone Location Accuracy</a></p></li>
+</ul>
+
+<ul>
+<li><p><a href="http://jayhickey.com/2012/05/new-blog">My New Blog!</a></p></li>
+</ul>
+
+<br>
+
+<h4 id="life">Life</h4>
+
+<ul>
+<li><p><a href="http://jayhickey.com/2011/12/my-favorite-christmas-gift">Loomi: My Favorite Christmas Gift</a></p></li>
+</ul>
+
+<br>
+
+<h4 id="fascinatingwebencounters">Fascinating Web Encounters</h4>
+
+<ul>
+
+
+<li><p><a href="http://jayhickey.com/2012/10/osu-marching-band">OSU Marching Band Tribute to Classic Video Games</a></p></li>
+
+<li><p><a href="http://jayhickey.com/2012/08/why-olympic-swimming-records-arent-being-broken">Why Olympic Swimming Records Aren’t Being Broken</a></p></li>
+</ul>
+
+
+                        						</article>
+
+            <footer>
+
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="http://jayhickey.com/rss.xml">RSS feed</a></p>
+
+            </footer>
+          </div>
+        </section>
+    </body>
+</html>

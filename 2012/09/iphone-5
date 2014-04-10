@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>iPhone 5: the Little Things</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+            <article>
+    
+                <header>
+                    <h2>
+                                                    <a href="iphone-5"
+                            rel="bookmark">iPhone 5: the Little Things</a>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">September 27, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to iPhone 5: the Little Things" href="iphone-5">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>The iPhone 5 has been out for almost a week now. After using it constantly and reading <a href="http://daringfireball.net/2012/09/iphone_5">way</a>  <a href="http://www.theverge.com/2012/9/21/3363238/iphone-5-review">too</a>  <a href="http://www.macworld.com/article/2010541/review-iphone-5-takes-next-step-in-smartphone-evolution.html">many</a> reviews, I've become really interested with some of the little, specific changes Apple made. So this isn't a full review—visit those other links if that's what you want—it's more a conglomerate of the interesting "little things"<sup id="fnref:little"><a class="footnote-ref" href="#fn:little" rel="footnote">1</a></sup> in the iPhone 5. </p>
+<h2>Call Quality</h2>
+<p>The first thing I did when I got the 5 was make a phone call with it. It's what most of that money I pay AT&amp;T is for, so I figured I would see if there were any improvements. Because of no voice-over-LTE yet, call reception in my area is still terrible. But from the quality side, it's amazing how much clearer and easier to hear everyone is. </p>
+<p>There are 3 microphones on the iPhone 5—bottom, front, and back. This is one more than the iPhone 4/4S, and the addition is noticeable. For the first time, noise canceling isn't just for the person on the other end. I notice it on my end too. You know the white noise sound and slight suction feeling when you put on noise canceling headphones? <em>It feels like that in my ear</em> when I'm on the phone. I was at the extremely busy and loud <a href="http://jayhickey.com/2012/09/oktoberfest">Cincinnati Oktoberfest</a> last weekend and had no trouble calling a cab while standing right behind the loud music stage. I'm no longer mashing on the "volume up" button, straining to hear. </p>
+<h2>Wideband Audio</h2>
+<p>Wideband audio would also be nice, but isn't coming to U.S. It would mean calls have less midrange and more bass and treble, i.e., voices have a much fuller sound, and less of that talking-through-a-tin-can sound. Wideband audio is known as HD voice on most Android phones, which also isn't supported here. I'm hoping the carriers can enable this in the future, but it's a lot of backend work I don't think any provider wants to put money towards. It's upsetting to think the iPhone has the hardware to make call quality even better, but it's likely we'll never hear it.</p>
+<h2>Built-in Speaker</h2>
+<p>Both the sound quality and loudness of the built-in speaker are fantastic and vastly improved. I use a <a href="http://jawbone.com/speakers/jambox/overview">Jambox</a> whenever I need a speaker phone or want to play music on the go, but it's undeniable that good built-in speakers are important to many people. The speaker is definitely larger, giving everything less tin in the treble range and a fuller bass response. Compared to the 4/4S, the speaker gets decently louder too.</p>
+<h2>Display</h2>
+<p>As <a href="http://www.apple.com/iphone/videos/#tv-ads-thumb">I'm sure you already know</a>, the display is taller. I have a love / hate relationship with this. On one hand, I love being able to see more of a web page and Twitter. However, I can barely reach the top left corner while using the phone with one hand. And I have pretty big hands. I have to <em>really</em> stretch, and sometimes even shimmy my hand up in order to reach the back button in apps like TweetBot, Reeder, or even Mail. I can see this really being an issue for people with smaller hands. Overall I'm happy with the change, but unless Apple makes up real estate by replacing the home button with more screen, I seriously don't want a display larger than 4 inches. </p>
+<p>Not only is the display bigger, it's better than any other smartphone on the market. The in-cell technology means the LCD is merged with the touch sensor, allowing the screen to be even thinner. Not only that, it also has a full sRGB color gamut, meaning colors really pop and are accurately represented. Held side by side with the 4/4S, you can really notice the difference—much darker blacks and more saturated colors that look great, but not ridiculous like the PenTile displays on other devices. This truly is one of the best displays around—better than even computer monitors and televisions. But don't just take my word for it—all you need to do is look at <a href="http://www.anandtech.com/show/6334/iphone-5-screen-performance">Anandtech's in-depth analysis</a> of the display to see how accurate it really is.</p>
+<h2>LTE</h2>
+<p>LTE is great. AT&amp;T is abysmal in a majority Cincinnati, but now with LTE, pages actually load.  Around town, I've run speed tests giving me close to 25 Mbps down and 6 Mbps up. That's just below the speeds I get on my 30/10 fiber connection at home. This has made made me happy to be with AT&amp;T again.</p>
+<p>I'm pleased with the speeds, but worried about how it'll perform once the network gets saturated and more people get LTE phones. A big concern is that AT&amp;T only has 5 MHz bandwidth LTE in Cincinnati, as opposed to the more common 10 MHz. This larger bandwidth allows for much faster maximum speeds and higher capacity. Brian Klug of <a href="http://www.anandtech.com/">Anandtech</a> tweeted a nice chart the other day showing max speeds at these different bandwidths:
+<div class="bbpBox" id="t250775029745336320">
+<blockquote>
+<span class="twContent">If you’re wondering about the difference in max speeds for 5MHz vs 10MHz FDD-LTE, this table is your friend: <a href="http://i.imgur.com/z74tS.png">i.imgur.com/z74tS.png</a> 2x2 = now</span>
+<br><br>
+<img src="http://jayhickey.com/media/2012/09/2012-09-27_041553.png" alt="LTE Peak Data Rates">
+<span class="twMeta"><br /><span class="twDecoration">&nbsp;&nbsp;&mdash; </span><span class="twRealName">Brian Klug</span><span class="twDecoration"> (</span><a href="http://twitter.com/nerdtalker"><span class="twScreenName">@nerdtalker</span></a><span class="twDecoration">) </span><a href="https://twitter.com/nerdtalker/statuses/250775029745336320"><span class="twTimeStamp">Tue Sep 25 2012 8:53 PM CDT</span></a><span class="twDecoration"></span></span>
+</blockquote>
+</div>  </p>
+<p>Verizon and AT&amp;T have 10 MHz in <em>most</em> areas, but Sprint is 5 MHz everywhere. I can't recommend anyone switch to Sprint with their <a href="http://www.theverge.com/2012/9/21/3367602/iphone-5-lte-markets-cities">lack of LTE coverage</a> and this choice in bandwidth. 5 MHz is OK for right now, but once the network gets loaded things will slow down. Hopefully carriers will add bandwidth if problems arise, though I'm not holding my breath. </p>
+<p>If you want to see what the bandwidth is in your area, enter Field Test Mode by calling <code>*3001#12345#*</code> then selecting "Serving Cell Info". You should see something like this<sup id="fnref:field"><a class="footnote-ref" href="#fn:field" rel="footnote">4</a></sup>:</p>
+<p><img alt="Field Test" src="http://jayhickey.com/media/2012/09/2012-09-27_040133.jpg" /></p>
+<p>I think it's interesting to look at the DL and UL frequencies too,  but I'm taking and RF and Microwave class this semester that relates to these parameters. Nevertheless, Field Test Mode is pretty expansive on the iPhone 5 compared to previous iPhones<sup id="fnref:ft"><a class="footnote-ref" href="#fn:ft" rel="footnote">5</a></sup>.</p>
+<h2>Vibrator Motor</h2>
+<p>Looking at <a href="http://www.ifixit.com/Teardown/iPhone-5-Teardown/10525/4">iFixit's teardown</a>, it seems like the iPhone 5 has the same vibrator motor as the iPhone 4. That is, a rotational motor with a counterweight. I can confirm that the vibration is identical to that of my old iPhone 4. Conversely, the 4S has a linear oscillating vibrator, which uses an electromagnet instead of a standard spinning motor. </p>
+<p>I hear that the oscillating vibrator is better, but I can't be really be the judge since I've never owned a 4S. What I do know though, is that the rotational motor is free spinning, so you can hear it rattle when shaking the phone. Shake your iPhone 4 or 5 rapidly next to your ear and listen to the top right corner. Hear that soft rattle? That's the vibrator spinning. That doesn't happen in a 4S. No big deal by any means, but for such a beautifully engineered phone, I'm curious as to what the design decision was for jumping back to the rotational motor.</p>
+<h2>Headphone Jack</h2>
+<p>I love having the headphone jack on bottom. I loved it on my old 1st generation iPod Touch, and am excited to have it back. But a lot of people dislike the change. Here are my four theories why Apple made the move:</p>
+<ol>
+<li>You can actually put your phone in your pocket the way I (and, I assume, most people) do. Top in first, with the screen side facing the leg. With all previous iPhones, I had to place it in bottom first if headphones were in, causing weird fumbling when pulling it out of my pocket. </li>
+<li>When you're using the iPhone 5 with headphones in and holding it in front of you, the cord isn't dangling over the screen and blocking your thumb. You also have more cable slack this way. </li>
+<li>Might be far fetched, but it's possible another reason for the move is Apple's <a href="http://9to5mac.com/2012/09/18/apple-marketing-svp-phil-schiller-confirms-apple-has-no-iphone-5-dock-in-the-works/">lack of iPhone docks</a>. Before, it was nice to be able to dock your iPhone while keeping the headphones in. Now with Airplay, iTunes Wi-Fi sync, iTunes Match, and automatic iCloud backups, people rarely need to plug their iPhones in short of charging them at night. I have yet to plug mine into my Mac, and don't plan to anytime soon.</li>
+<li>There just wasn't enough room in the top of the phone and the new, smaller lightning connector freed up some space in the bottom for a headphone jack. <a href="http://www.ifixit.com/Teardown/iPhone-5-Teardown/10525/1">From what I can see</a>, the 720p front facing camera occupies a good amount of real estate up top<sup id="fnref:cam"><a class="footnote-ref" href="#fn:cam" rel="footnote">2</a></sup>.</li>
+</ol>
+<p>Regardless of why they did it<sup id="fnref:theories"><a class="footnote-ref" href="#fn:theories" rel="footnote">3</a></sup>, I'm definitely a fan.</p>
+<h2>The Crux</h2>
+<p>I really like my iPhone 5. It's shockingly light, ridiculously fast, and built like nothing I've ever owned<sup id="fnref:worn"><a class="footnote-ref" href="#fn:worn" rel="footnote">6</a></sup>. These "little things" aren't so little when they add up to make the best cell phone ever made. I can't wait to keep using this thing and discovering more.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:little">
+<p>Alright maybe some medium-sized things too, but I I'll in sprinkle some personal insight on those.&#160;<a class="footnote-backref" href="#fnref:little" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cam">
+<p>The 720p front camera is great by the way. Not only for all the ladies who use it to take self-portraits of themselves with their friends, but FaceTime looks better too. Especially if the receiving end is on an iPad.&#160;<a class="footnote-backref" href="#fnref:cam" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:theories">
+<p>At least one of these theories has to be correct though, right?&#160;<a class="footnote-backref" href="#fnref:theories" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:field">
+<p>I wish Apple would've optimized Field Test Mode for the iPhone 5 screen. Stupid black bars.&#160;<a class="footnote-backref" href="#fnref:field" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ft">
+<p>Although I have no clue what most of the data means.&#160;<a class="footnote-backref" href="#fnref:ft" rev="footnote" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:worn">
+<p>And no worn out home button like on my old iPhone 4!&#160;<a class="footnote-backref" href="#fnref:worn" rev="footnote" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>

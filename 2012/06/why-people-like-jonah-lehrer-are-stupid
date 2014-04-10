@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>Why People Like Jonah Lehrer Are Stupid</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+            <article class="link">
+    
+                <header>
+                    <h2>
+                                                    <a href="http://www.slate.com/articles/life/culturebox/2012/06/jonah_lehrer_self_plagiarism_the_new_yorker_staffer_stopped_being_a_writer_and_became_an_idea_man_.html"
+                            rel="bookmark">Why People Like Jonah Lehrer Are Stupid</a>
+                            <span class="linkarrow">&rarr;</span>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">June 21, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to Why People Like Jonah Lehrer Are Stupid" href="why-people-like-jonah-lehrer-are-stupid">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>Turns out, a large amount of <a href="http://www.newyorker.com/online/blogs/frontal-cortex/2012/06/daniel-kahneman-bias-studies.html"><em>The New Yorker</em> piece</a> that I <a href="http://jayhickey.com/2012/06/16/why-smart-people-are-stupid">linked to</a> last week consisted of recycled material: </p>
+<blockquote>
+<p>The victim: Jonah Lehrer. The newly minted New Yorker staff writer’s June 12 blog post “Why Smart People Are Stupid” copied, at times word for word, three paragraphs from Lehrer’s 2011 Wall Street Journal story “The Science of Irrationality.” A few hours later, New York’s Joe Coscarelli and writer Jacob Silverman discovered a bunch more instances in which Lehrer 
+reheated his leftovers.</p>
+</blockquote>
+<p>Journalists found out today that <a href="http://www.edrants.com/how-jonah-lehrer-recycled-his-own-material-for-imagine/">Lehrer's been doing this for years</a>. In 2006, he even plagiarized excerpts from an essay by fellow <em>New Yorker</em> colleague Malcolm Gladwell. So apparently, pressing ⌘-C then ⌘-V makes you a journalist now.</p>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>

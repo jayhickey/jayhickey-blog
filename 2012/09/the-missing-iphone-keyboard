@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>The Missing iPhone Keyboard</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+            <article>
+    
+                <header>
+                    <h2>
+                                                    <a href="the-missing-iphone-keyboard"
+                            rel="bookmark">The Missing iPhone Keyboard</a>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">September 11, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to The Missing iPhone Keyboard" href="the-missing-iphone-keyboard">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>With the imminent launch of <a href="http://www.apple.com/ios/ios6/">iOS 6</a> and the <a href="http://www.loopinsight.com/2012/09/04/apple-announces-special-event-for-september-12/">iPhone 5</a>, I thought it would be fun to talk about a missing iOS feature—one that isn't going to make it into the iPhone 5, and probably won't ever exist in iOS. It's a feature all of my Android-loving friends and family members swear by—so much so that they refuse to switch to an iPhone because of it's inexistence in the Apple universe. It's called <a href="http://www.swiftkey.net/">SwiftKey</a>. </p>
+<p>So what is SwiftKey? If you've never owned an Andriod phone, I doubt you've heard of it. Here's a synopsis from TouchType's <a href="http://www.swiftkey.net/about/what-is-swiftkey">'What is SwiftKey?' page</a>:</p>
+<blockquote>
+<p>SwiftKey gives much more accurate corrections and predictions than other keyboards, because it’s powered by natural language technology. It understands how words work together, meaning very sloppy typing just works and the word you’ll probably want next is magically predicted.</p>
+</blockquote>
+<p>Basically, SwiftKey adds a 5th row to your keyboard, above the normal QWERTY keyboard. This row gives you three suggestions of what word you want to type next, based on previous words and letters you've already typed. It also learns your common phrases and sentence structures, so you might only need to hit a letter or two before tapping through the predictions to finish a phrase. It makes on-screen typing extremely quick and accurate.</p>
+<p>Every Android user I've talked to claims that once you spend some time with SwiftKey, you can't go back to anything else. As iPhone owners, we've all been screwed over by autocorrect before—there are <a href="http://www.damnyouautocorrect.com/">entire websites</a> dedicated to making fun of it—yet the iPhone keyboard is no different than it was in 2007. Apple has added new words to the dictionary over the years, but the method of typing on the iPhone hasn't changed. So why wouldn't Apple incorporate something like SwiftKey into iOS? </p>
+<p>Well actually, they did. Or at least they <em>almost</em> did. Many users were excited about a year ago when hacker <a href="https://twitter.com/SonnyDickson">Sonny Dickson</a> found a <a href="http://9to5mac.com/2011/11/09/ios-5-hides-an-android-like-autocorrect-keyboard-bar-heres-how-to-enable-it/">hidden autocorrect bar</a> in iOS 5. It was basically SwiftKey ported to iOS. All you had to do was modify a .plist file to enable it. Most thought this was a clear sign that a new keyboard would show up in iOS 5.1. But it never happened. </p>
+<p>So why haven't we seen SwiftKey in iOS? I know nothing about the software patents SwiftKey has, but I doubt that's the reason. Apple could buy SwiftKey without blinking an eye. I think the reason we haven't, and never will see SwiftKey on iOS, is because of the nature of how we type on iPhones—or at least how we're <em>supposed</em> to type. I never thought about it until I heard <a href="http://www.merlinmann.com/">Merlin Mann</a><sup id="fnref:merlin"><a class="footnote-ref" href="#fn:merlin" rel="footnote">1</a></sup> on <a href="http://5by5.tv/hypercritical/79">episode 79 of Hypercritical</a> (at about the 1:36:00 mark). He hit the nail on the head:</p>
+<blockquote>
+<p>Think about when you very first picked up an iPhone and started typing on it. In my case—in retrospect—it's crazy how long it took me to get that I had to stop typing like I was on a computer, which is where I would, basically, hunt and peck. And I would hit one letter at a time, and correct every miss-hit letter, because that's how you type. And you know what I do now? I go, "Naghhhhhh" and I just hit it fast with my thumbs, and it gets it mostly right! And then I go fix the misspellings. And its a thousand times faster than hunting and pecking.</p>
+</blockquote>
+<p>That's how I type on my iPhone too. It's definitely the best way. SwiftKey goes against that methodology—you have to look at the predictions as you type, taking it one word at a time. The iPhone screws up typing often, but it has some advantages. For one, I'm not required to constantly stare at my phone when I type, so texting while walking isn't as dangerous. I'm also forced to proofread what I write. Typo corrections are quick and fairly painless.</p>
+<p>But a lot of people don't type this way. Many become extremely frustrated when autocorrect screws up. SwiftKey would ameliorate that, while also helping convince some Android users to give iOS a chance. But all in all, we've grown accustom to the quirks of the iPhone keyboard. It's simple, and actually pretty good. And in the Apple world, simplicity reigns<sup id="fnref:swifti5"><a class="footnote-ref" href="#fn:swifti5" rel="footnote">2</a></sup>.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:merlin">
+<p>If you don't know who Merlin Mann is, shame on you. Go listen to <a href="http://www.merlinmann.com/roderick/">Roderick on the Line</a> right now. I promise you won't regret it. &#160;<a class="footnote-backref" href="#fnref:merlin" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:swifti5">
+<p>Playing devil's advocate with myself: the iPhone 5 screen is going to be <a href="http://www.macrumors.com/roundup/iphone-5/">176 pixels taller</a>, and each row on an iPhone keyboard is about 108 pixels high. Therefore, adding a 5th row for the SwiftKey autocorrect bar wouldn't cause the keyboard to use a higher percentage of the screen than it already does. So you never know. But I still don't see it happening. &#160;<a class="footnote-backref" href="#fnref:swifti5" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>

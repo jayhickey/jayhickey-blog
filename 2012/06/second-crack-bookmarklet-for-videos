@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>Second Crack Bookmarklet For Embedding Videos</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+            <article>
+    
+                <header>
+                    <h2>
+                                                    <a href="second-crack-bookmarklet-for-videos"
+                            rel="bookmark">Second Crack Bookmarklet For Embedding Videos</a>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">June 17, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to Second Crack Bookmarklet For Embedding Videos" href="second-crack-bookmarklet-for-videos">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>So far, <a href="https://github.com/marcoarment/secondcrack">Second Crack</a> has been really nice for blogging. The included bookmarklets have been indispensable for drafting quick links from my iPhone or iPad, but there's no easy way to post videos. I watch tons of videos on the web, and would love to be able to share them here. So I created a bookmarklet that makes it simple to do that.</p>
+<p>This is the first time I've ever worked with PHP, so I'm definitely out of my comfort zone. But I'm pleased with my implementation. The bulk of the functionality relies on two functions:</p>
+<p><code>get_html</code> uses <a href="http://curl.haxx.se/">cURL</a> to easily return the HTML of the current page as a string:</p>
+<div class="highlight"><pre><span class="x">   
+    <span class="k">function</span> <span class="nf">get_html</span><span class="p">(</span><span class="nv">$url</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$ch</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
+        <span class="nv">$timeout</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span><span class="nx">CURLOPT_URL</span><span class="p">,</span><span class="nv">$url</span><span class="p">);</span>
+        <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span><span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+        <span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$ch</span><span class="p">,</span><span class="nx">CURLOPT_CONNECTTIMEOUT</span><span class="p">,</span><span class="nv">$timeout</span><span class="p">);</span>
+        <span class="nv">$data</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
+        <span class="nb">curl_close</span><span class="p">(</span><span class="nv">$ch</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nv">$data</span><span class="p">;</span>
+    <span class="p">}</span>
+
+</pre></div>
+
+<p>Pretty straightforward. By setting <code>CURLOPT_RETURNTRANSFER</code> to TRUE, <code>curl_exec</code> is returned as a string instead of being output directly.</p>
+<p><code>video_embed</code> finds the ID of the video and returns an HTML iframe for embedding:</p>
+<div class="highlight"><pre><span class="x">
+
+   <span class="k">function</span> <span class="nf">video_embed</span><span class="p">(</span><span class="nv">$html</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$vimeo</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;#player.vimeo.com/video/([0-9]*)#i&#39;</span><span class="p">);</span>
+        <span class="nv">$youtube</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;#/embed/([0-9a-z_-]+)#i&#39;</span><span class="p">,</span> <span class="s1">&#39;#youtu.be/([0-9a-z_-]+)#i&#39;</span><span class="p">,</span>                 <span class="s1">&#39;#/v/([0-9a-z_-]+)#i&#39;</span><span class="p">,</span> <span class="s1">&#39;#v=([0-9a-z_-]+)#i&#39;</span><span class="p">);</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">sizeof</span><span class="p">(</span><span class="nv">$vimeo</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nb">preg_match</span><span class="p">(</span><span class="nv">$vimeo</span><span class="p">[</span><span class="nv">$i</span><span class="p">],</span> <span class="nv">$html</span><span class="p">,</span> <span class="nv">$id</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$id</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="k">NULL</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="s1">&#39;&lt;iframe src=&quot;http://player.vimeo.com/video/&#39;</span> <span class="o">.</span> <span class="nv">$id</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">.</span> <span class="s1">&#39;?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;color=ff0000&amp;amp;fullscreen=1&amp;amp;autoplay=0&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&#39;</span><span class="p">;</span>         
+            <span class="p">}</span>       
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">sizeof</span><span class="p">(</span><span class="nv">$youtube</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nb">preg_match</span><span class="p">(</span><span class="nv">$youtube</span><span class="p">[</span><span class="nv">$i</span><span class="p">],</span> <span class="nv">$html</span><span class="p">,</span> <span class="nv">$id</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$id</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="k">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="s1">&#39;&lt;iframe src=&quot;http://www.youtube.com/embed/&#39;</span> <span class="o">.</span> <span class="nv">$id</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">.</span> <span class="s1">&#39;?autohide=1&amp;amp;fs=1&amp;amp;autoplay=0&amp;amp;iv_load_policy=3&amp;amp;rel=0&amp;amp;modestbranding=1&amp;amp;showinfo=0&amp;amp;hd=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&#39;</span><span class="p">;</span>    
+            <span class="p">}</span>
+        <span class="p">}</span>   
+        <span class="k">return</span> <span class="k">NULL</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+</pre></div>
+
+<p>The first two lines create arrays of regex patterns for video IDs of both embedded and non-embedded videos.<sup id="fnref:SC"><a class="footnote-ref" href="#fn:SC" rel="footnote">1</a></sup></p>
+<p><code>preg_match</code> then searches for a match in the HTML and returns an array called <code>$id</code>. <code>$id[0]</code> has the full text of the regex match and <code>$id[1]</code> has the text that matches the first captured parenthesized subpattern (i.e., just the video ID). Upon a match, embed code is returned with <code>$id[1]</code>'s value in place.</p>
+<h3>Notes:</h3>
+<ul>
+<li>
+<p>This bookmarklet only works for <strong>YouTube</strong> and <strong>Vimeo</strong> videos. Pretty much all of my online video viewing is from these two services, so I'm fine with this limitation.</p>
+</li>
+<li>
+<p>Any selected text will also be included in the draft as a blockquote. If no video is found on the current page, the bookmarklet functions just like Second Crack's included "Draft Link".</p>
+</li>
+</ul>
+<p><strong><a href="http://jayhickey.com/media/2012/06/add-video.zip">Download</a></strong> the source for the bookmarklet and install it the same way as <a href="https://github.com/marcoarment/secondcrack#posting-with-bookmarklets">Marco instructs</a>. If you already have the other bookmarklets setup, just place <code>add-video.php</code> in the same directory and navigate to, e.g.:</p>
+<div class="codehilite"><pre>http://admin.myblog.com/add-video.php
+</pre></div>
+
+
+<p>and install the bookmarklet from there.</p>
+<p>Alternatively, I've added this to the existing "Draft Article" and "Draft Link" bookmarklet code. This conveniently keeps all the bookmarklets together and in one file. See the full source at my fork on <a href="https://github.com/jayhickey/secondcrack/blob/master/api-www/add-draft.php">GitHub</a>.</p>
+<p>I'm open to all ideas on improving the existing regex, expanding the functionality to other video services, or anything that will make this better. <a href="http://jayhickey.com/about">Get in touch</a>.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:SC">
+<p>These are mixes of patterns I threw together and ones found on the web. They've worked against everything I've tried—mobile and non-mobile sites, embedded and non-embedded videos—but there may be some edge cases I've missed.&#160;<a class="footnote-backref" href="#fnref:SC" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>

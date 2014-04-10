@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <meta charset="UTF-8" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
+    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
+
+    <title>Jay Hickey</title>
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32102758-1']);
+    _gaq.push(['_setDomainName', 'none']);
+    _gaq.push(['_setAllowLinker', 'true']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+
+<!--
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../theme/pastie.css" />
+    <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
+        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+        
+     -->
+
+  </head>
+
+  <body>
+    <div class="meny-contents">
+
+
+        <div id="mastheadbackground">&nbsp;</div>
+
+        <section id="posts">
+
+            <div id="masthead">
+                <h1><a href="/">Jay Hickey</a></h1>
+
+                <p id="description">Technology, life, and fascinating web encounters.</p>
+
+                <nav>
+                    <a href="http://jayhickey.com/about">About</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                </nav>
+            </div>
+        <div id="container">
+
+            
+                <article>
+    
+                <header>
+                    <h2>
+                                                    <a href="../2012/10/bringing-dark-sky-to-the-mac-with-pysky"
+                            rel="bookmark">Bringing Dark Sky to the Mac with PySky</a>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">October 25, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to Bringing Dark Sky to the Mac with PySky" href="2012/10/bringing-dark-sky-to-the-mac-with-pysky">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>I love the <a href="http://darkskyapp.com">Dark Sky app</a> for iOS. It's the best way to find out if rain or snow is imminent. Weather is unpredictable and inaccurate, but Dark Sky has honestly never failed me. It's amazing.</p>
+<p>I've been thinking about how nice it would be to have Dark Sky on my Mac too. Since school has been pretty busy, I haven't been able to work on personal projects like this as I'd like. But I finally played with Dark Sky's newly released <a href="https://developer.darkskyapp.com/docs">API</a>—specifically Ryan Larrabure's <a href="https://github.com/ryanlarrabure/DarkSky.py/">Python wrapper</a>. It was extremely easy to pull in all of the natural English language forecast information and display it cleanly on my Desktop with <a href="https://itunes.apple.com/us/app/geektool/id456877552">GeekTool</a>. The output looked like this:</p>
+<div class="codehilite"><pre>NOW
+Rain, 44° F
+
+NEXT HOUR 
+Rain for 45 min
+
+FOLLOWING 3 HRS
+Moderate rain
+
+NEXT 24 HRS 
+Moderate chance of rain
+</pre></div>
+
+
+<p>Right after I finished it, Dr. Drang made an <a href="http://www.leancrew.com/all-this/2012/10/matplotlib-and-the-dark-sky-api/">awesome post</a> on plotting Dark Sky data with matplotlib. This inspired me to dig a little deeper and incorporate a precipitation intensity plot. Huge thanks go out to him for such a great post. Here's what the intensity plot looks like:</p>
+<p><a href="http://jayhickey.com/media/2012/10/2012-10-25_062052.png" class="imagelink"><img alt="" src="http://jayhickey.com/media/2012/10/2012-10-25_061747.png" /></a></p>
+<p>I also decided to incorporate Dr. Drang's method of using standard Python JSON decoding, instead of the Ryan's Python wrapper. This saves the extra step of installing another module. </p>
+<p><a href="https://github.com/jayhickey/PySky">PySky</a> is my result of these shenanigans. Here's it is:</p>
+<pre><span class="c">#!/usr/bin/python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">environ</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="nb">exit</span><span class="p">,</span> <span class="n">argv</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="c"># If desired, enter lat &amp; long as arguments</span>
+<span class="k">try</span><span class="p">:</span>
+  <span class="n">lat</span> <span class="o">=</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+  <span class="n">lon</span> <span class="o">=</span> <span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+  <span class="n">lat</span> <span class="o">=</span> <span class="mf">39.200932</span>
+  <span class="n">lon</span> <span class="o">=</span> <span class="o">-</span><span class="mf">84.376009</span>
+
+<span class="c"># Get my API key and construct the URL</span>
+<span class="k">try</span><span class="p">:</span>
+  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">environ</span><span class="p">[</span><span class="s">&#39;HOME&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s">&#39;/.darksky&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">rcfile</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">rcfile</span><span class="p">:</span>
+      <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;:&#39;</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s">&#39;APIkey&#39;</span><span class="p">:</span>
+        <span class="n">APIkey</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">dsURL</span> <span class="o">=</span> <span class="s">&#39;https://api.darkskyapp.com/v1/forecast/</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">,</span><span class="si">%s</span><span class="s">&#39;</span> \
+          <span class="o">%</span> <span class="p">(</span><span class="n">APIkey</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span>
+<span class="k">except</span> <span class="p">(</span><span class="ne">IOError</span><span class="p">,</span> <span class="ne">NameError</span><span class="p">):</span>
+  <span class="k">print</span> <span class="s">&quot;Failed to get API key&quot;</span>
+  <span class="nb">exit</span><span class="p">()</span>
+
+<span class="c"># Get the data from Dark Sky.</span>
+<span class="k">try</span><span class="p">:</span>
+  <span class="n">jsonString</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">dsURL</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+  <span class="n">weather</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">jsonString</span><span class="p">)</span>
+<span class="k">except</span> <span class="p">(</span><span class="ne">IOError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+  <span class="k">print</span> <span class="s">&quot;Connection failure to </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">dsURL</span>
+  <span class="nb">exit</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="s">&#39;NOW</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">weather</span><span class="p">[</span><span class="s">&#39;currentSummary&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#39;, &#39;</span>\
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">weather</span><span class="p">[</span><span class="s">&#39;currentTemp&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="s">u&#39;° F&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf8&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span>
+<span class="k">print</span> <span class="s">&#39;NEXT HOUR </span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">+</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;hourSummary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span>
+
+<span class="c"># Highest intensity in the next 3 hours.</span>
+<span class="n">hrsType</span> <span class="o">=</span> <span class="p">[</span> <span class="n">i</span><span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;dayPrecipitation&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">hrsProb</span> <span class="o">=</span> <span class="p">[</span> <span class="n">i</span><span class="p">[</span><span class="s">&#39;probability&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;dayPrecipitation&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">]</span>
+
+<span class="n">chance</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">hrsProb</span><span class="p">)</span>
+<span class="n">probIndex</span> <span class="o">=</span> <span class="n">hrsProb</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">chance</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">chance</span> <span class="o">&gt;</span> <span class="mf">0.8</span><span class="p">:</span>
+  <span class="n">nextThreeHrs</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">hrsType</span><span class="p">[</span><span class="n">probIndex</span><span class="p">]))</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="k">elif</span> <span class="n">chance</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">:</span>
+  <span class="n">nextThreeHrs</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s"> likely&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">hrsType</span><span class="p">[</span><span class="n">probIndex</span><span class="p">]))</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="k">elif</span> <span class="n">chance</span> <span class="o">&gt;</span> <span class="mf">0.2</span><span class="p">:</span>
+  <span class="n">nextThreeHrs</span> <span class="o">=</span> <span class="s">&#39;Possible </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">hrsType</span><span class="p">[</span><span class="n">probIndex</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="n">nextThreeHrs</span> <span class="o">=</span> <span class="s">&#39;No precipitation&#39;</span>
+
+<span class="k">print</span>  <span class="s">&#39;FOLLOWING 3 HRS</span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">+</span> <span class="n">nextThreeHrs</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span>
+<span class="k">print</span> <span class="s">&#39;NEXT 24 HRS </span><span class="se">\n</span><span class="s">&#39;</span> <span class="o">+</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;daySummary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span>
+
+<span class="c"># Hourly intensity information for plot.</span>
+<span class="n">intensity</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s">&#39;intensity&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;hourPrecipitation&#39;</span><span class="p">]]</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">[</span><span class="s">&#39;time&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;hourPrecipitation&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">&#39;time&#39;</span><span class="p">])</span><span class="o">/</span><span class="mi">60</span> \
+     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;hourPrecipitation&#39;</span><span class="p">]]</span>
+
+<span class="c"># Plot dashed lines at intensity ranges.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s">&#39;dashed&#39;</span><span class="p">)</span>
+
+
+<span class="c"># Plot the values.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">intensity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;#ffff00&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="o">.</span><span class="mi">8</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span> <span class="n">frameon</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="mf">7.5</span><span class="p">,</span> <span class="mf">22.5</span><span class="p">,</span> <span class="mf">37.5</span><span class="p">,</span> <span class="mf">52.5</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;sporadic&#39;</span><span class="p">,</span> <span class="s">&#39;light&#39;</span><span class="p">,</span> <span class="s">&#39;moderate&#39;</span><span class="p">,</span> <span class="s">&#39;heavy&#39;</span><span class="p">],</span>\
+  <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="s">&#39;y&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">&#39;Minutes from now&#39;</span><span class="p">)</span>
+
+<span class="c"># Save out to a png image.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">&#39;/Volumes/MacHD/Projects/darksky-scripts/ds-rain-1.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">220</span><span class="p">,</span> \
+  <span class="n">transparent</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s">&#39;tight&#39;</span><span class="p">)</span>
+
+
+</pre>
+
+<p><a href="https://github.com/jayhickey/PySky">GitHub</a> is where you can download the source and view instructions to both run the script and display it on your Desktop with GeekTool—the latter of which makes PySky <em>really</em> useful. It looks like this on my Mac:</p>
+<p><img alt="" src="http://jayhickey.com/media/2012/10/2012-10-25_062241.png" /></p>
+<p>An explanation of the beginning of the script—reading in the latitude and longitude coordinates, getting the API key in from the <code>~/.darksky</code> file, and retrieving JSON data from the Dark Sky—is better explained in <a href="http://www.leancrew.com/all-this/2012/10/matplotlib-and-the-dark-sky-api/">Dr. Drang's post</a>. He also does a great job at describing the plot routine.</p>
+<p>I really like the presentation of data in the Dark Sky iOS apps, so I wanted PySky to show almost all same the info:</p>
+<p><a href="http://jayhickey.com/media/2012/10/2012-10-25_044137.png" class="imagelink"><img alt="" src="http://jayhickey.com/media/2012/10/2012-10-25_044137.png" /></a></p>
+<p>Displaying the English language forecast information was really all I had to do. The <a href="https://developer.darkskyapp.com/docs/forecast">Hourly Forecast API Docs</a> and some simple introspection told me most of what I needed to know about the <code>weather</code> variable containing the returned JSON object from Dark Sky.</p>
+<p>"Now" and "Next Hour" information was easily retrieved with <code>weather['currentSummary']</code> and <code>weather['hourSummary']</code>. I don't find "Overnight", "Morning", and "Afternoon" particularly useful, so they're replaced with "Next 24 Hours" data from <code>weather['daySummary']</code>.</p>
+<p>For the "Following 3 Hours" information, I used <code>weather['dayPrecipitation']</code> data. The docs explain that <code>dayPrecipitation</code> contains an array of precipitation predictions for the next 24 hours. The size of <code>dayPrecipitation</code> is 25, where <code>dayPrecipitation[0]</code> is the current precipitation, and <code>dayPrecipitation[24]</code> is 24 hours from now. Each <code>dayPrecipitation[n]</code> contains a dictionary with precipitation <code>probability</code>, <code>type</code>, <code>temp</code>, and <code>time</code>:</p>
+<div class="codehilite"><pre><span class="s2">&quot;dayPrecipitation&quot;</span><span class="o">:</span> <span class="cp">[</span>
+    <span class="p">{</span> <span class="s2">&quot;probability&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;rain&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;temp&quot;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span>
+      <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">1325607311</span> <span class="p">},</span>
+
+    <span class="p">{</span> <span class="s2">&quot;probability&quot;</span><span class="p">:</span> <span class="mf">0.84</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;rain&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;temp&quot;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span>
+      <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">1325610911</span> <span class="p">},</span>
+
+    <span class="p">{</span> <span class="s2">&quot;probability&quot;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;rain&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;temp&quot;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span>
+      <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="mi">1325614511</span> <span class="p">},</span>
+</pre></div>
+
+
+<p>We just want the <code>type</code> and <code>probability</code> for hours <code>[1:4]</code><sup id="fnref:tip"><a class="footnote-ref" href="#fn:tip" rel="footnote">1</a></sup>, so I created a list of each like so:</p>
+<div class="codehilite"><pre><span class="n">hrsType</span> <span class="o">=</span> <span class="p">[</span> <span class="n">i</span><span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;dayPrecipitation&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">hrsProb</span> <span class="o">=</span> <span class="p">[</span> <span class="n">i</span><span class="p">[</span><span class="s">&#39;probability&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;dayPrecipitation&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+
+
+<p>The next line, <code>chance = max(hrsProb)</code>, finds the maximum probability of precipitation, and <code>probIndex = hrsProb.index(max(hrsProb))</code> finds the index (hour) of that maximum. Then we just find the <code>type</code> of precipitation at this index and print it out with terms such as "likely" or "possible" depending on the max probability:</p>
+<div class="codehilite"><pre><span class="k">if</span> <span class="n">chance</span> <span class="o">&gt;</span> <span class="mf">0.8</span><span class="p">:</span>
+  <span class="n">nextThreeHrs</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">hrsType</span><span class="p">[</span><span class="n">probIndex</span><span class="p">]))</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="k">elif</span> <span class="n">chance</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">:</span>
+  <span class="n">nextThreeHrs</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s"> likely&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">hrsType</span><span class="p">[</span><span class="n">probIndex</span><span class="p">]))</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="k">elif</span> <span class="n">chance</span> <span class="o">&gt;</span> <span class="mf">0.2</span><span class="p">:</span>
+  <span class="n">nextThreeHrs</span> <span class="o">=</span> <span class="s">&#39;Possible </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">hrsType</span><span class="p">[</span><span class="n">probIndex</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="n">nextThreeHrs</span> <span class="o">=</span> <span class="s">&#39;No precipitation&#39;</span>
+</pre></div>
+
+
+<p>I haven't tested this enough to be sure that 0.8, 0.5, and 0.2 are proper probability thresholds, but they've been fine so far for me.</p>
+<p>I think this might be one of the quickest and most basic scrips I've written, but it's also one of the most <em>useful</em> to me. Having the precipitation forecast at a quick glance on my computer will come in handy every day when I check the weather in the morning. I'm always looking for ways to make my programs better, so if you have any suggestions for improvements please <a href="http://jayhickey.com/about">get in touch</a>.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:tip">
+<p><code>[1:4]</code> means from element 1 up to, but not including 4.&#160;<a class="footnote-backref" href="#fnref:tip" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+                <article class="link">
+    
+                <header>
+                    <h2>
+                                                    <a href="http://kottke.org/12/10/osu-marching-band-tribute-to-classic-video-games"
+                            rel="bookmark">OSU Marching Band Tribute to Classic Video Games</a>
+                            <span class="linkarrow">&rarr;</span>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">October 09, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to OSU Marching Band Tribute to Classic Video Games" href="2012/10/osu-marching-band">&#x271c;</a>
+                    </p>
+                </header>
+
+                <p>OSU—The Best Damn Band in the Land—doing what they do best. Think of all the work put in to make this happen. </p>
+<p>For the first time in years, I <em>really</em> miss being in my high school marching band. I can't handle the amount of nostalgia this video is making me feel<sup id="fnref:a"><a class="footnote-ref" href="#fn:a" rel="footnote">1</a></sup>.</p>
+<iframe src="http://www.youtube.com/embed/sAzzbrFgcUw?autohide=1&amp;fs=1&amp;autoplay=0&amp;iv_load_policy=3&amp;rel=0&amp;modestbranding=1&amp;showinfo=0&amp;hd=1" frameborder="0" allowfullscreen></iframe>
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:a">
+<p>And the amount of jealousy I feel towards towards my sister, who was at the game and saw this in person.&#160;<a class="footnote-backref" href="#fnref:a" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+                <article class="link">
+    
+                <header>
+                    <h2>
+                                                    <a href="http://www.technologyreview.com/news/429495/hydrogen-cars-a-dream-that-wont-die/"
+                            rel="bookmark">Hydrogen Cars: A Dream That Won't Die</a>
+                            <span class="linkarrow">&rarr;</span>
+                                                                       </h2>
+
+                    <p>
+                        <time datetime="" pubdate="pubdate">October 09, 2012</time>
+                        &#0020;
+                        <a class="permalink" title="Permalink to Hydrogen Cars: A Dream That Won't Die" href="2012/10/hydrogen-cars">&#x271c;</a>
+                    </p>
+                </header>
+
+                <blockquote>
+<p>Automakers are showing new interest because key problems with fuel cells—their limited capacity to convert hydrogen to electricity and their susceptibility to freezing—have largely been overcome in recent years. At the same time, the first mass-produced electric vehicles based on batteries—the fuel cell's technological rival for the zero-emissions mantle—have seen sales slow because their range remains disappointing and their prices high.</p>
+</blockquote>
+<p>I've always thought of battery powered cars as a middle man in the evolution toward hydrogen fuel cells. Undoubtedly, electric cars both convinced people to try something new and made the prospect of owning a zero emission vehicle tangible. But there was no chance for them to become <em>the energy source</em> for cars. If you want to drive a long distance, what are you going to do? Swap battery packs? Hang out at the diner for a couple hours while your car charges? That isn't practical. </p>
+<p>Now that the kinks are worked out, I'm excited to see an emergence of hydrogen cars. It will take time to get the price down, but they'll get there.</p>
+
+            </article>
+            <div class="fin">&#x2110;&#x210b;</div>
+
+    
+
+
+                    </ul>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2011-2013 John Hickey. All rights reserved. <a href="rss.xml">RSS feed</a></p>
+
+        </footer>
+        </section>
+    </div>
+    </div>
+
+  </body>
+</html>
