@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
     <meta name="viewport" content="width=device-width" />
 
     <!-- <link href="http://jayhickey.com/assets/css/meny.css" rel = "stylesheet"> -->
-    <link href="http://jayhickey.com/theme/css/main_pelican.css" rel="stylesheet">
+    <link href="theme/css/main_pelican.css" rel="stylesheet">
 
-    <link rel="apple-touch-icon-precomposed" href="http://jayhickey.com/media/blog_logo.png"/>
-    <link rel="shortcut icon" href="http://jayhickey.com/media/blog_logo.png"/>
-    <link rel="icon" type="image/png" href="http://jayhickey.com/media/blog_logo.png" sizes="16x16 32x32">
+    <link rel="apple-touch-icon-precomposed" href="media/blog_logo.png"/>
+    <link rel="shortcut icon" href="media/blog_logo.png"/>
+    <link rel="icon" type="image/png" href="media/blog_logo.png" sizes="16x16 32x32">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:300,900' rel='stylesheet' type='text/css'>
 
-    <title>Bringing Dark Sky to the Mac with PySky</title>
+        <title>Bringing Dark Sky to the Mac with PySky</title>
 
     <!-- Google Analytics -->
     <script type="text/javascript">
@@ -32,12 +33,12 @@
 
 <!--
     <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../theme/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="../../theme/pastie.css" />
+    <link rel="stylesheet" type="text/css" href="http://jayhickey.com/theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="http://jayhickey.com/theme/pastie.css" />
     <link href="http://jayhickey.com/" type="application/atom+xml" rel="alternate" title="Jay Hickey Atom Feed" />
-        <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
-        
-     -->
+    <link href="http://jayhickey.com/rss.xml" type="application/rss+xml" rel="alternate" title="Jay Hickey RSS Feed" />
+
+ -->
 
   </head>
 
@@ -50,35 +51,35 @@
         <section id="posts">
 
             <div id="masthead">
-                <h1><a href="/">Jay Hickey</a></h1>
+                <h1><a href="blog/">Jay Hickey</a></h1>
 
                 <p id="description">Technology, life, and fascinating web encounters.</p>
 
                 <nav>
-                    <a href="http://jayhickey.com/about">About</a>
+                    <a href="about">About</a>
                     &nbsp;
                     |
                     &nbsp;
-                    <a href="http://jayhickey.com/highlights"> Highlights</a>
+                    <a href="highlights"> Highlights</a>
                     &nbsp;
                     |
                     &nbsp;
-                    <a href="http://jayhickey.com/twitter"> Twitter</a>
+                    <a href="http://twitter.com/jayhickey"> Twitter</a>
                 </nav>
             </div>
         <div id="container">
 
-            
-            <article>
-    
+
+        <article>
+
                 <header>
                     <h2>
-                                                    <a href="bringing-dark-sky-to-the-mac-with-pysky"
+                            <a href="bringing-dark-sky-to-the-mac-with-pysky"
                             rel="bookmark">Bringing Dark Sky to the Mac with PySky</a>
-                                                                       </h2>
+                                               </h2>
 
                     <p>
-                        <time datetime="" pubdate="pubdate">October 25, 2012</time>
+                        <time datetime="" pubdate="pubdate">Thu 25 October 2012</time>
                         &#0020;
                         <a class="permalink" title="Permalink to Bringing Dark Sky to the Mac with PySky" href="bringing-dark-sky-to-the-mac-with-pysky">&#x271c;</a>
                     </p>
@@ -86,7 +87,7 @@
 
                 <p>I love the <a href="http://darkskyapp.com">Dark Sky app</a> for iOS. It's the best way to find out if rain or snow is imminent. Weather is unpredictable and inaccurate, but Dark Sky has honestly never failed me. It's amazing.</p>
 <p>I've been thinking about how nice it would be to have Dark Sky on my Mac too. Since school has been pretty busy, I haven't been able to work on personal projects like this as I'd like. But I finally played with Dark Sky's newly released <a href="https://developer.darkskyapp.com/docs">API</a>—specifically Ryan Larrabure's <a href="https://github.com/ryanlarrabure/DarkSky.py/">Python wrapper</a>. It was extremely easy to pull in all of the natural English language forecast information and display it cleanly on my Desktop with <a href="https://itunes.apple.com/us/app/geektool/id456877552">GeekTool</a>. The output looked like this:</p>
-<div class="codehilite"><pre>NOW
+<div class="highlight"><pre>NOW
 Rain, 44° F
 
 NEXT HOUR 
@@ -199,7 +200,7 @@ Moderate chance of rain
 <p>Displaying the English language forecast information was really all I had to do. The <a href="https://developer.darkskyapp.com/docs/forecast">Hourly Forecast API Docs</a> and some simple introspection told me most of what I needed to know about the <code>weather</code> variable containing the returned JSON object from Dark Sky.</p>
 <p>"Now" and "Next Hour" information was easily retrieved with <code>weather['currentSummary']</code> and <code>weather['hourSummary']</code>. I don't find "Overnight", "Morning", and "Afternoon" particularly useful, so they're replaced with "Next 24 Hours" data from <code>weather['daySummary']</code>.</p>
 <p>For the "Following 3 Hours" information, I used <code>weather['dayPrecipitation']</code> data. The docs explain that <code>dayPrecipitation</code> contains an array of precipitation predictions for the next 24 hours. The size of <code>dayPrecipitation</code> is 25, where <code>dayPrecipitation[0]</code> is the current precipitation, and <code>dayPrecipitation[24]</code> is 24 hours from now. Each <code>dayPrecipitation[n]</code> contains a dictionary with precipitation <code>probability</code>, <code>type</code>, <code>temp</code>, and <code>time</code>:</p>
-<div class="codehilite"><pre><span class="s2">&quot;dayPrecipitation&quot;</span><span class="o">:</span> <span class="cp">[</span>
+<div class="highlight"><pre><span class="s2">&quot;dayPrecipitation&quot;</span><span class="o">:</span> <span class="cp">[</span>
     <span class="p">{</span> <span class="s2">&quot;probability&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
       <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;rain&quot;</span><span class="p">,</span>
       <span class="s2">&quot;temp&quot;</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span>
@@ -218,13 +219,13 @@ Moderate chance of rain
 
 
 <p>We just want the <code>type</code> and <code>probability</code> for hours <code>[1:4]</code><sup id="fnref:tip"><a class="footnote-ref" href="#fn:tip" rel="footnote">1</a></sup>, so I created a list of each like so:</p>
-<div class="codehilite"><pre><span class="n">hrsType</span> <span class="o">=</span> <span class="p">[</span> <span class="n">i</span><span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;dayPrecipitation&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">]</span>
+<div class="highlight"><pre><span class="n">hrsType</span> <span class="o">=</span> <span class="p">[</span> <span class="n">i</span><span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;dayPrecipitation&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">]</span>
 <span class="n">hrsProb</span> <span class="o">=</span> <span class="p">[</span> <span class="n">i</span><span class="p">[</span><span class="s">&#39;probability&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">weather</span><span class="p">[</span><span class="s">&#39;dayPrecipitation&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">]</span>
 </pre></div>
 
 
 <p>The next line, <code>chance = max(hrsProb)</code>, finds the maximum probability of precipitation, and <code>probIndex = hrsProb.index(max(hrsProb))</code> finds the index (hour) of that maximum. Then we just find the <code>type</code> of precipitation at this index and print it out with terms such as "likely" or "possible" depending on the max probability:</p>
-<div class="codehilite"><pre><span class="k">if</span> <span class="n">chance</span> <span class="o">&gt;</span> <span class="mf">0.8</span><span class="p">:</span>
+<div class="highlight"><pre><span class="k">if</span> <span class="n">chance</span> <span class="o">&gt;</span> <span class="mf">0.8</span><span class="p">:</span>
   <span class="n">nextThreeHrs</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">hrsType</span><span class="p">[</span><span class="n">probIndex</span><span class="p">]))</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
 <span class="k">elif</span> <span class="n">chance</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">:</span>
   <span class="n">nextThreeHrs</span> <span class="o">=</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s"> likely&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">hrsType</span><span class="p">[</span><span class="n">probIndex</span><span class="p">]))</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
@@ -251,7 +252,7 @@ Moderate chance of rain
 
 
 
-                    </ul>
+            </ul>
         </div>
 
 
